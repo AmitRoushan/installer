@@ -36,9 +36,9 @@ sudo -E env "PATH=$PATH" ansible-playbook ansible/clean.yml -vv -i ansible/local
 
 # Disable both the SRM Toolchain and Orchestration Manager installation
 # sed -i 's/^enable_telemetry_tools: .*/enable_telemetry_tools: '"false"'/g' ansible/group_vars/telemetry.yml
-sed -i 's/^install_srm_toolchain: .*/install_srm_toolchain: '"false"'/g' ansible/group_vars/srm-toolchain.yml
-sed -i 's/^enable_orchestration: .*/enable_orchestration: '"false"'/g' ansible/group_vars/orchestration.yml
+#sed -i 's/^install_srm_toolchain: .*/install_srm_toolchain: '"false"'/g' ansible/group_vars/srm-toolchain.yml
+#sed -i 's/^enable_orchestration: .*/enable_orchestration: '"false"'/g' ansible/group_vars/orchestration.yml
 # Validate the installation using container type
-sed -i 's/^install_from: .*/install_from: '"container"'/g' ansible/group_vars/common.yml
-sudo -E env "PATH=$PATH" ansible-playbook ansible/site.yml -vv -i ansible/local.hosts
-sudo -E env "PATH=$PATH" ansible-playbook ansible/clean.yml -vv -i ansible/local.hosts
+#sed -i 's/^install_from: .*/install_from: '"container"'/g' ansible/group_vars/common.yml
+#sudo -E env "PATH=$PATH" ansible-playbook ansible/site.yml -vv -i ansible/local.hosts
+#sudo -E env "PATH=$PATH" ansible-playbook ansible/clean.yml -vv -i ansible/local.hosts
